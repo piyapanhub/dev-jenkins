@@ -8,7 +8,8 @@ pipeline {
         }
         stage('test-deploy') {
             steps {
-                sh "kubectl apply -f nginx-deployment.yaml"
+                sh "pwd"
+                sh "ls -la"
             }
         }
         stage('Hello-success') {
