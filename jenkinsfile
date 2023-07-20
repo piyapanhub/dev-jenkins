@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('remote') {
-            steps {
-                sh "ssh root@147.50.227.54"
-                sh "PIyapanadmin"
-            }
-        }
         stage('Hello') {
             steps {
                 echo 'Hello World'
@@ -16,7 +10,6 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "ls -la"
-                sh "kubectl apply -f nginx-deployment.yaml"
             }
         }
         stage('Hello-success') {
