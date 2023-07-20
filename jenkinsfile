@@ -1,9 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
+        stage('remote') {
             steps {
-                sh "exit"
+                sh "ssh 147.50.227.54"
+                sh "root"
+                sh "PIyapanadmin"
             }
         }
         stage('Hello') {
