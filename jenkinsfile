@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('remote') {
             steps {
-                sh "ssh 147.50.227.54"
-                sh "root"
+                sh "ssh root@147.50.227.54"
                 sh "PIyapanadmin"
             }
         }
