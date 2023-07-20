@@ -6,9 +6,9 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('Hello2') {
+        stage('test-deploy') {
             steps {
-                echo 'Hello World2'
+                sh("kubectl apply -f nginx-deployment.yaml")
             }
         }
         stage('Hello-success') {
